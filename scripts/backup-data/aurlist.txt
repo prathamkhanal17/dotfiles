@@ -1,0 +1,16 @@
+catppuccin-gtk-theme-mocha
+gapless
+gapless-debug
+hyprshade
+libcava
+libcava-debug
+pipes.sh
+postman-bin
+resvg
+resvg-debug
+sublime-text-4
+sublime-text-4-debug
+wlogout
+wlogout-debug
+yay-bin
+yay-bin-debug

@@ -1,0 +1,23 @@
+{
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.location": "top",
+    "editor.minimap.enabled": false,
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', 'monospace', monospace",
+    "editor.fontSize": 16,
+    "code-runner.runInTerminal": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "code-runner.saveFileBeforeRun": true,
+    "redhat.telemetry.enabled": false,
+    "workbench.startupEditor": "none",
+    "workbench.settings.applyToAllProfiles": [
+
+    ],
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.iconTheme": "catppuccin noctis icons",
+    "catppuccin-noctis-icons.hidesExplorerArrows": false,
+    "security.workspace.trust.untrustedFiles": "open"
+}

@@ -1,0 +1,158 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": [
+    "hyprland/workspaces",
+    // "cpu",
+    "memory",
+    "hyprland/window",
+    "custom/caffeinate"
+    // "custom/ai"
+  ],
+  "modules-center": ["custom/media"],
+  "modules-right": [
+    // "custom/power_profile",
+    "wireplumber",
+    "battery",
+    "network",
+    "clock",
+    "tray",
+    "custom/weather",
+    "custom/updates",
+    // "custom/hyprsunset",
+    // "custom/clipboard",
+    // "custom/swaync",
+    "custom/wlogout"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "active":""
+    }
+  },
+  "hyprland/window": {
+  "format": "{class}"
+},
+"tray":{
+  "spacing":5
+},
+
+  "custom/media": {
+    "exec": "~/.config/waybar/scripts/media.sh",
+    "interval": 5,
+    "return-type": "json",
+    "format": "{}",
+    "on-click": "playerctl play-pause",
+    "max-length":30
+  },
+
+  "custom/swaync": {
+    "format": "󰂚",
+    "tooltip": "Notifications",
+    "on-click": "swaync-client -t",
+    "on-click-right": "swaync-client -C"
+  },
+
+  "clock": {
+    "format": "󰥔 {:%d %b %I:%M %p}",
+    "tooltip-format": "<big>{:%Y-%m-%d}</big>",
+    "interval": 60
+  },
+
+  "cpu": { "format": "󰍛 {usage}%", "tooltip": true },
+  "memory": { "format": " {used:0.1f}G/{total:0.1f}G", "tooltip": true },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "interval": 30
+  },
+
+  "network": {
+    "format-wifi": "󰤨 {essid} ({signalStrength}%)",
+    "format-ethernet": "󰈀 {ipaddr}",
+    "format-disconnected": "󰤭 No net",
+    "tooltip": true
+  },
+
+  "wireplumber": {
+    "format": "󰕾 {volume}%",
+    "format-muted": "󰖁 muted",
+    "on-click": "pavucontrol"
+  },
+
+  "custom/weather": {
+    "exec": "~/.config/waybar/scripts/weather.sh",
+    "interval": 600,
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true
+  },
+
+  "custom/power_profile": {
+    "exec": "~/.config/waybar/scripts/power_profile.sh",
+    "interval": 10,
+    "format": "{}",
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/power_profile.sh toggle",
+    "on-click-right": "",                                            // No right click action
+    "on-click-middle": "" 
+  },
+
+  "custom/wlogout": {
+    "format": "⏻",
+    "on-click": "wlogout",
+    "tooltip": "Logout / Shutdown"
+  },
+  "custom/hyprsunset": {
+    "exec": "~/.config/waybar/scripts/hyprsunset.sh",
+    "interval": 5,
+    "return-type": "json",
+    "on-click": "~/.config/waybar/scripts/hyprsunset_toggle.sh",
+    "tooltip": true
+  },
+
+  "custom/clipboard": {
+    "format": "",
+    "on-click": "~/.config/waybar/scripts/cliphist-menu.sh",
+    "interval": 5
+    // "tooltip": true
+  },
+  "custom/ai": {
+    "format": "",
+    "on-click": "firefox https://chatgpt.com",
+    "tooltip": "the fucking ai dude"
+  },
+  "custom/updates": {
+    "exec": "~/.config/waybar/scripts/pacman-updates.sh",
+    "interval": 1800,
+    "return-type": "json",
+    "format": "󰮯 {}",
+    "on-click": "kitty -e sudo pacman -Syu"
+  },
+ "custom/caffeinate": {
+    "exec": "~/.config/waybar/scripts/caffeinate-status.sh",
+    "return-type": "json",
+    "interval": 5,
+    "tooltip": "Toggle Caffeinate",
+    "on-click": "~/.config/waybar/scripts/caffeinate-toggle.sh",     // Left click
+    "on-click-right": "",                                            // No right click action
+    "on-click-middle": ""                                            // No middle click action
+}
+
+
+ 
+
+}
