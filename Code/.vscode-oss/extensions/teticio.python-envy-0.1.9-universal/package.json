@@ -1,0 +1,78 @@
+{
+	"name": "python-envy",
+	"displayName": "Python Envy",
+	"description": "Automatically activate Python virtual environments as you navigate the source code",
+	"publisher": "teticio",
+	"license": "BSD-3-Clause",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/teticio/python-envy.git"
+	},
+	"version": "0.1.9",
+	"engines": {
+		"vscode": "^1.85.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"icon": "icon.png",
+	"keywords": [
+		"python",
+		"monorepo",
+		"venv",
+		"virtualenv",
+		"poetry",
+		"pipenv"
+	],
+	"activationEvents": [
+		"onDebugInitialConfigurations",
+		"onLanguage:python",
+		"onDebugResolve:python",
+		"workspaceContains:mspythonconfig.json",
+		"workspaceContains:pyproject.toml",
+		"workspaceContains:Pipfile",
+		"workspaceContains:setup.py",
+		"workspaceContains:requirements.txt",
+		"workspaceContains:manage.py",
+		"workspaceContains:app.py",
+		"workspaceContains:*.ipynb"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "Python Envy",
+			"properties": {
+				"pythonEnvy.venvName": {
+					"type": "string",
+					"default": ".venv",
+					"description": "Name of the Python virtual environment directory."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "yarn run lint",
+		"test": "vscode-test"
+	},
+	"extensionDependencies": [
+		"ms-python.python"
+	],
+	"devDependencies": {
+		"@types/mocha": "^10.0.6",
+		"@types/node": "18.x",
+		"@types/vscode": "^1.85.0",
+		"@vscode/test-cli": "^0.0.4",
+		"@vscode/test-electron": "^2.3.8",
+		"eslint": "^8.56.0",
+		"typescript": "^5.3.3"
+	},
+	"dependencies": {
+		"@vscode/python-extension": "^1.0.5"
+	},
+	"__metadata": {
+		"installedTimestamp": 1750500084174,
+		"targetPlatform": "universal",
+		"size": 820903
+	}
+}

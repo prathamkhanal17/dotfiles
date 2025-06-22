@@ -1,9 +1,9 @@
 #!/bin/bash
-source "$HOME/.config/waybar/api.env"
-API_KEY="$MY_API_KEY"
+source "$HOME/.config/waybar/api.env" #export MY_API_KEY="Add your api key here like this"
+API_KEY="$MY_API_KEY" 
 CITY="Biratnagar,NP"
 UNITS="metric"
-ICON=""
+ICON="󰔏"
 
 response=$(curl -sf "https://api.openweathermap.org/data/2.5/weather?q=$CITY&appid=$API_KEY&units=$UNITS")
 

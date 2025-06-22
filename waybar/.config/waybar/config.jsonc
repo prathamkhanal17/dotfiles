@@ -2,12 +2,12 @@
   "layer": "top",
   "position": "top",
 
+
   "modules-left": [
     "hyprland/workspaces",
     // "cpu",
     "memory",
-    "hyprland/window",
-    "custom/caffeinate"
+    "hyprland/window"
     // "custom/ai"
   ],
   "modules-center": ["custom/media"],
@@ -141,16 +141,7 @@
     "return-type": "json",
     "format": "󰮯 {}",
     "on-click": "kitty -e sudo pacman -Syu"
-  },
- "custom/caffeinate": {
-    "exec": "~/.config/waybar/scripts/caffeinate-status.sh",
-    "return-type": "json",
-    "interval": 5,
-    "tooltip": "Toggle Caffeinate",
-    "on-click": "~/.config/waybar/scripts/caffeinate-toggle.sh",     // Left click
-    "on-click-right": "",                                            // No right click action
-    "on-click-middle": ""                                            // No middle click action
-}
+  }
 
 
  

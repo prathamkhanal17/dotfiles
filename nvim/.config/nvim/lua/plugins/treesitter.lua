@@ -6,7 +6,7 @@ return {
     config=function()
         local config = require("nvim-treesitter.configs")
         config.setup({
-            ensure_installed = { "java", "python", "lua" },
+            autoinstall=true,
             indent = { enable = true },
             highlight = { enable = true },
         })
