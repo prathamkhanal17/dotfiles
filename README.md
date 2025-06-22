@@ -1,4 +1,2 @@
 # My dotfiles
-# MyDotfiles
-# MyDotfiles
-# MyDotfiles
+Based on the catppuccin-mocha.
