@@ -147,7 +147,12 @@
     "on-click": "kitty -e sudo pacman -Syu"
   }
 
-
+"custom/nepali_date": {
+  "format": "🗓️ BS: {}",
+  "exec": "python3 ~/.config/waybar/scripts/nepali_date.py",
+  "interval": 60,
+  "tooltip": false
+}
  
 
 }
