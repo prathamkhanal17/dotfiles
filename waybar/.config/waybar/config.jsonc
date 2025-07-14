@@ -76,8 +76,12 @@
   "memory": { "format": " {used:0.1f}G/{total:0.1f}G", "tooltip": true },
   "battery": {
     "format": "{icon} {capacity}%",
+    "format-charging":"⚡ {capacity}%",
+    "format-plugged": " {capacity}%",
     "format-icons": ["", "", "", "", ""],
-    "interval": 30
+    "interval": 1,
+    "tooltip": true,
+    "tooltip-format": "{timeTo} {capacity}%"
   },
 
   "network": {
@@ -143,7 +147,12 @@
     "on-click": "kitty -e sudo pacman -Syu"
   }
 
-
+"custom/nepali_date": {
+  "format": "🗓️ BS: {}",
+  "exec": "python3 ~/.config/waybar/scripts/nepali_date.py",
+  "interval": 60,
+  "tooltip": false
+}
  
 
 }
